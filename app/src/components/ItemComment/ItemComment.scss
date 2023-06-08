@@ -1,0 +1,36 @@
+.item-comment {
+  display: flex;
+  gap: 20px;
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    &__name {
+      font-weight: 700;
+      line-height: 20px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    &__time {
+      font-size: 14px;
+      height: 24px;
+      line-height: 24px;
+    }
+    &__content {
+      line-height: 24px;
+      max-height: 120.6px;
+      overflow: hidden;
+      position: relative;
+      word-break: break-word;
+    }
+  }
+}

@@ -1,0 +1,79 @@
+@import "../../styles/variable.scss";
+
+.chapter-detail {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  .title {
+    text-align: center;
+    margin-bottom: 10px;
+    h1 {
+      line-height: 30px;
+      font-size: 24px;
+      color: #366ad3;
+      font-weight: 700;
+    }
+    h2 {
+      font-size: 22px;
+      color: #666;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+    div {
+      font-size: 14px;
+      color: #666;
+    }
+  }
+  .actions {
+    position: sticky;
+    top: -1px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    background: #fff;
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f5f5f5;
+      padding: 5px 15px;
+      border-radius: 20px;
+      color: #000;
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+      &.allchapter {
+        color: #fff;
+        background: #366ad3;
+      }
+      &.options {
+        border: none;
+        margin-left: auto;
+        padding: 0;
+      }
+      &.play {
+        font-size: 25px;
+        color: #366ad3;
+        padding: 0;
+      }
+      @include mobile {
+        span {
+          display: none;
+        }
+      }
+    }
+    &.bottom {
+      position: static;
+      margin-bottom: 0;
+      padding: 0;
+      background: none;
+      justify-content: space-between;
+    }
+  }
+  .content {
+    margin-bottom: 10px;
+  }
+}

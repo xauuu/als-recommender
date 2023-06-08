@@ -1,0 +1,160 @@
+@import "./styles/variable.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: #f5f5f5;
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.main {
+  padding: 50px 70px;
+  @include mobile {
+    padding: 20px 10px;
+  }
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.section-popular {
+  background-color: #fff;
+  box-shadow: 4px 2px 4px #8f8f8f;
+
+  .section-popular__title {
+    font-size: 20px;
+    font-weight: 700;
+    border-bottom: 1px solid #ececec;
+    padding: 8px 15px;
+  }
+}
+
+.custom-tab {
+  margin: 10px;
+  padding: 6px;
+  overflow: hidden;
+  background: #f1f1f1;
+  border-radius: 3px;
+
+  li {
+    width: 33.33333333333333%;
+    padding: 0;
+    border: 0;
+    float: left;
+    text-align: center;
+
+    button {
+      color: #000;
+      font-size: 13px;
+      padding: 3px;
+      background: transparent;
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+.box {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 1px 3px 8px rgb(49 49 49 / 10%);
+  overflow: hidden;
+  h2 {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  &.comment {
+    .comment__content {
+      padding: 20px;
+      &__nologin {
+        h3 {
+          font-size: 18px;
+          font-weight: 600;
+        }
+        div {
+          margin-top: 10px;
+          font-size: 15px;
+          line-height: 1.5;
+          color: #333;
+        }
+      }
+    }
+  }
+}
+
+.owl-dots {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  .owl-dot {
+    span {
+      padding: 6px;
+      background: rgba(255, 255, 255, 0.24);
+      margin: 1px 3px;
+      display: inline-block;
+      border-radius: 10px;
+      box-shadow: 0px 2px 2px rgb(0 0 0 / 60%), inset 0px 1px 1px rgb(0 0 0 / 52%);
+    }
+    &.active {
+      span {
+        background: #ffd400 !important;
+      }
+    }
+  }
+}
+
+legend {
+  float: none;
+}
+
+p {
+  margin-bottom: 0 !important;
+}
+
+.hover_login {
+  cursor: pointer;
+  &:hover {
+    color: #366ad3;
+  }
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.to_capitalize {
+  text-transform: capitalize;
+}
+
+.plain-text-only {
+  user-modify: read-write-plaintext-only;
+  -moz-user-modify: read-write-plaintext-only;
+  -webkit-user-modify: read-write-plaintext-only;
+}

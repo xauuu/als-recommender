@@ -1,0 +1,86 @@
+.btn-container {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  height: 30px;
+
+  label {
+    font-size: 13px;
+    color: #424242;
+    font-weight: 500;
+  }
+
+  .btn-switch-mode-switch {
+    display: inline-block;
+    margin: 0px;
+    position: relative;
+
+    label.btn-switch-mode-switch-inner {
+      margin: 0px;
+      width: 140px;
+      height: 30px;
+      background: #e0e0e0;
+      border-radius: 26px;
+      overflow: hidden;
+      position: relative;
+      transition: all 0.3s ease;
+      /*box-shadow: 0px 0px 8px 0px rgba(17, 17, 17, 0.34) inset;*/
+      display: block;
+
+      &:before {
+        content: attr(data-on);
+        position: absolute;
+        font-size: 12px;
+        font-weight: 500;
+        top: 6px;
+        right: 25px;
+      }
+
+      &:after {
+        content: attr(data-off);
+        width: 70px;
+        height: 26px;
+        color: #fff;
+        background: #366ad3;
+        border-radius: 26px;
+        position: absolute;
+        left: 3px;
+        top: 2px;
+        text-align: center;
+        transition: all 0.3s ease;
+        box-shadow: 0px 0px 6px -2px #111;
+        padding: 3px 0px;
+      }
+    }
+
+    input[type="checkbox"] {
+      cursor: pointer;
+      width: 100%;
+      height: 25px;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      margin: 0px;
+
+      &:checked + label.btn-switch-mode-switch-inner {
+        background: #e0e0e0;
+        color: #000;
+      }
+
+      &:checked + label.btn-switch-mode-switch-inner:before {
+        content: attr(data-off);
+        right: auto;
+        left: 25px;
+      }
+
+      &:checked + label.btn-switch-mode-switch-inner:after {
+        content: attr(data-on);
+        left: 68px;
+        background: #366ad3;
+        color: #fff;
+      }
+    }
+  }
+}

@@ -1,0 +1,137 @@
+.df {
+  display: flex;
+  .sidebar-container {
+    position: relative;
+    flex: 0 0 auto;
+    z-index: 101;
+    width: 280px;
+    .sidebar {
+      position: fixed;
+      width: 280px;
+      background-color: #fff;
+      box-shadow: 2px 0 8px rgb(0 0 0 / 4%), 12px 0 24px rgb(64 64 64 / 4%);
+      transition: 0.3s;
+      height: 100vh;
+
+      &__logo {
+        padding: 16px 24px;
+        position: relative;
+        line-height: 47px;
+        font-size: 2em;
+        transition: 0.3s;
+        z-index: 3;
+        img {
+          width: 47px;
+          height: 56px;
+        }
+        .toggle {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 8px;
+          font-size: 20px;
+
+          svg {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+
+      &__menu,
+      &__account {
+        font-size: 18px;
+        h3 {
+          padding: 16px 24px;
+          font-size: 20px;
+          line-height: 20px;
+          color: rgba(18, 18, 23, 0.6);
+          font-weight: 600;
+          font-variant: small-caps;
+          text-transform: lowercase;
+          transition: 0.3s;
+        }
+
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+
+          li {
+            position: relative;
+            a {
+              display: block;
+              padding: 16px 24px;
+              line-height: 24px;
+              text-decoration: none;
+              text-transform: capitalize;
+              color: rgba(18, 18, 23, 0.9);
+
+              img,
+              svg {
+                float: left;
+                margin-right: 16px;
+                width: 24px;
+                height: 24px;
+              }
+              span {
+                font-size: 18px;
+                font-weight: 500;
+                display: block;
+                transition: 0.3s;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+              }
+            }
+
+            &:hover {
+              background-color: #f0f0f0;
+            }
+            > .active {
+              background-color: #f0f0f0;
+              box-shadow: inset 4px 0 0 #485dea;
+            }
+          }
+        }
+      }
+
+      &__account {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        border-top: 1px solid #f0f0f0;
+      }
+    }
+  }
+  .w64 {
+    width: 64px !important;
+    .sidebar__logo {
+      img {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+    .sidebar__menu,
+    .sidebar__account {
+      h3 {
+        opacity: 0;
+        visibility: hidden;
+      }
+      ul {
+        li {
+          a {
+            padding: 16px 20px;
+            svg {
+              margin-right: 8px;
+            }
+            span {
+              opacity: 0;
+              visibility: hidden;
+            }
+          }
+        }
+      }
+    }
+  }
+}

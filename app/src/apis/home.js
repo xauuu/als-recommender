@@ -59,3 +59,13 @@ export const getNewestNovels = (number) => {
     }
   });
 };
+
+export const predict = ({ data }) => {
+  return apiServices.post("/predict", { ...data }).then((response) => {
+    if (response.status === 200) {
+      return response.data;
+    } else {
+      return [];
+    }
+  });
+};

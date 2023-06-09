@@ -8,6 +8,7 @@ import AuthGuard from "./../components/Auth/AuthGuard";
 import MainLayout from "./MainLayout";
 import AdminLayout from "./AdminLayout";
 import AdminGuard from "../components/Auth/AdminGuard.js";
+import Create from "../views/Upload/Create/index.js";
 const Home = lazy(() => import("../views/Home"));
 const Account = lazy(() => import("../views/Account"));
 const Upload = lazy(() => import("../views/Upload"));
@@ -32,7 +33,7 @@ function App() {
           </Route>
           <Route>
             <MainLayout>
-              <Route exact path="/" component={Home} />
+              <Route exact path="/" component={Create} />
               <Route exact path="/detail/:novelId" component={NovelDetail} />
               <Route path="/detail/:novelId/chapter/:chapterNumber" component={ChapterDetail} />
               <Route path="/summarize" component={Summarize} />

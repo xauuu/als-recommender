@@ -1,8 +1,9 @@
 # Hướng dẫn cài đặt
 
-## git clone https://github.com/xauuu/als-recommender
-
-## cd als-recommender
+```
+git clone https://github.com/xauuu/als-recommender
+cd als-recommender
+```
 
 ### Chạy api:
 
